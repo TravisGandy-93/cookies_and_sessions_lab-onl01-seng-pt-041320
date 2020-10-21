@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   def cart
     @cart = session[:cart] ||= []
 
-    @cart
+    @cart.compact
   end
 end
